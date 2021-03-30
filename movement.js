@@ -1,6 +1,7 @@
 const selectWhitePawns = document.getElementsByClassName("white");
 const selectBlackPawns = document.getElementsByClassName("black");
 
+
 canMove();
 
 function canMove() {

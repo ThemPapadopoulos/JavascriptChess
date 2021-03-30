@@ -3,7 +3,7 @@ const queen = '<i class="pieces fas fa-chess-queen"></i>';
 const bishop = '<i class="pieces fas fa-chess-bishop"></i>';
 const knight = '<i class="pieces fas fa-chess-knight"></i>';
 const rook = '<i class="pieces fas fa-chess-rook"></i>';
-const pawn = '<i class="pieces fas fa-chess-pawn"></i>';
+const soldier = '<i class="pieces fas fa-chess-pawn"></i>';
 
 // the back line on array
 backLine = [rook, knight, bishop, queen, king, bishop, knight, rook];
@@ -17,7 +17,7 @@ function setBoardPawns() {
   for (let i = 0; i < divs.length; i++) {
     if (divs[i].id.indexOf("7") != -1) {
       //!id contains 7(front row of black pawn)
-      divs[i].innerHTML = pawn;
+      divs[i].innerHTML = soldier;
       divs[i].firstChild.classList += " black";
     }
   }
@@ -34,7 +34,7 @@ function setBoardPawns() {
   for (let o = 0; o < divs.length; o++) {
     if (divs[o].id.includes("2")) {
       //! id contains 2(front row of white pawn)
-      divs[o].innerHTML = pawn;
+      divs[o].innerHTML = soldier;
       divs[o].firstChild.classList += " white";
     }
   }
@@ -56,3 +56,15 @@ function setBoardPawns() {
     }
   }
 }
+
+
+
+function checkOccupiedBlocks() {
+  const allTileSelection = document.querySelectorAll(".block");
+allTileSelection.forEach( (tile) =>{
+  if (tile.innerHTML){
+    tile.classList.add("occupied");
+  }
+})
+};
+

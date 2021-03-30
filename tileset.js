@@ -1,4 +1,5 @@
 const board = document.querySelector(".board");
+
 let letters = ["a", "b", "c", "d", "e", "f", "g", "h"];
 let numbers = ["8", "7", "6", "5", "4", "3", "2", "1"];
 
@@ -17,5 +18,13 @@ function createBoardTiles(number) {
   }
 }
 
-//---------function from pawnset.js---------
-setBoardPawns();
+//---------functions taken  from pawnset.js---------
+
+setBoardPawns(); //set initial pawns
+
+
+//!tests with pawn plasement here
+//a4.innerHTML=soldier;
+
+
+checkOccupiedBlocks(); // check populated(=with pawn on them) tiles
